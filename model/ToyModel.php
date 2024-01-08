@@ -34,7 +34,13 @@
             $sql = "UPDATE Toy SET name = '$name',price = '$price',provider = '$provider',discount = '$discount', image = '$image' WHERE toy_id ='$toy_id';";
 
             $this->db->query($sql);
+        }
 
+        public function insert($name, $price, $provider, $discount, $image)
+        {
+            $sql = "INSERT INTO Toy (name,price,provider,discount,image) VALUES ('$name','$price','$provider','$discount','$image');";
+
+            $this->db->query($sql);
         }
 
 

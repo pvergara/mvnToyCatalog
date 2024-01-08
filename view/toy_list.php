@@ -8,7 +8,7 @@
     </script>
 </head>
 <body>
-<table
+<table>
 <tr>
     <th>Name</th>
     <th>Price</th>
@@ -33,6 +33,6 @@ foreach ($data as $toyItem) {
 }
 ?>
 </table>
-
+<a href="../controller/new_toy.php">Nuevo juguete</a>
 </body>
 </html>
