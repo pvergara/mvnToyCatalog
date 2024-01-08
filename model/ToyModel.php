@@ -10,11 +10,17 @@
         }
 
         public function getToy(){
-            $sql = "SELECT toy_id, name, price, provider, discount, image FROM Toy";
+            $sql = "SELECT toy_id, name, price, provider, discount, image FROM Toy;";
             foreach ($this->db->query($sql) as $res){
                 $this->toy[] = $res;
             }
             return $this->toy;
+        }
+
+        public function delete($toy_id)
+        {
+            $sql = "DELETE FROM Toy WHERE toy_id = $toy_id;";
+            $this->db->query($sql);
         }
 
 

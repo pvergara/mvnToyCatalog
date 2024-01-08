@@ -15,6 +15,7 @@
     <th>Provider</th>
     <th>Discount</th>
     <th>Image</th>
+    <th>Actions</th>
 </tr>
 <?php
 foreach ($data as $toyItem) {
@@ -25,6 +26,7 @@ foreach ($data as $toyItem) {
         <td><?php echo $toyItem["provider"]; ?></td>
         <td><?php echo $toyItem["discount"]; ?></td>
         <td><img src="<?=$toyItem["image"]?>" width="200px" height="200px">
+        <td><a href="../controller/delete_toy.php?toy_id=<?=$toyItem["toy_id"]?>">Delete</a>
     </tr>
     <?php
 }
